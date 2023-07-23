@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(2.jpg);
+    background-size: cover;
+}
+.box{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #93C572;
+    border-radius: 8px;
+}
+.box form{
+position: absolute;
+inset: 4px;
+background: #ffb6c1;
+padding: 50px 40px;
+border-radius: 8px;
+display: flex;
+flex-direction: column;
+z-index: 2;
+}
+h2{
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+}
+.inputbox{
+    position: relative;
+    width: 330px;
+    margin-top: 35px;
+}
+.inputbox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: 0.5s;
+    z-index: 10;
+    border: none;
+}
+.inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #23242a;
+    font-size: 16px;
+    transition: 0.5s;
+
+}
+
+.box form .inputbox input:valid ~ span,
+.box form .inputbox input:focus ~ span
+{
+    color: white;
+    font-size: 16px;
+    transform: translateY(-34px);
+
+} .inputbox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.box form .inputbox input:valid ~ i,
+.box form .inputbox input:focus ~ i
+{
+    height: 44px;
+
+
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+
+}
+.links a{
+    margin: 10px 0;
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+.links a:hover{
+    color: #ffff;
+}
+
+.box form input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #ffff;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+
+}
+
+.box form input[type="submit"]:active
+{
+    opacity: 0.8;
+}
